@@ -1,33 +1,37 @@
-Name:           libloader
-Version:        1.1.6
-Release:        %mkrel 3
-Summary:        Resource Loading Framework
-License:        LGPLv2+
-Group:          Development/Java 
-Source0:        http://downloads.sourceforge.net/jfreereport/%{name}-%{version}.zip
-URL:            http://reporting.pentaho.org/
-BuildRequires:  ant, ant-contrib, ant-nodeps, java-devel, jpackage-utils
-BuildRequires:  libbase >= 1.1.3
-Requires:       java, jpackage-utils, libbase >= 1.1.3
-BuildArch:      noarch
-Patch0:         libloader-1.1.2-fix-build.patch
+Summary:	Resource Loading Framework
+Name:		libloader
+Version:	1.1.6
+Release:	1
+License:	LGPLv2+
+Group:		Development/Java 
+Url:		http://reporting.pentaho.org/
+Source0:	http://downloads.sourceforge.net/jfreereport/%{name}-%{version}.zip
+Patch0:		libloader-1.1.2-fix-build.patch
+BuildArch:	noarch
+BuildRequires:	ant
+BuildRequires:	ant-contrib
+BuildRequires:	ant-nodeps
+BuildRequires:	java-devel
+BuildRequires:	jpackage-utils
+BuildRequires:	libbase >= 1.1.3
+Requires:	java
+Requires:	jpackage-utils
+Requires:	libbase >= 1.1.3
 
 %description
 LibLoader is a general purpose resource loading framework. It has been
 designed to allow to load resources from any physical location and to
-allow the processing of that content data in a generic way, totally
-transparent to the user of that library.
-
+allow the processing of that content data in a generic way 
+BuildRequires:	totally transparent to the user of that library.
 
 %package javadoc
-Summary:        Javadoc for %{name}
-Group:          Documentation
-Requires:       %{name} = %{version}-%{release}
-Requires:       jpackage-utils
+Summary:	Javadoc for %{name}
+Group:		Development/Java
+Requires:	%{name} = %{version}-%{release}
+Requires:	jpackage-utils
 
 %description javadoc
 Javadoc for %{name}.
-
 
 %prep
 %setup -q -c
@@ -56,39 +60,10 @@ mkdir -p %{buildroot}%{_javadocdir}/%{name}
 cp -rp bin/javadoc/docs/api %{buildroot}%{_javadocdir}/%{name}
 
 %files
-%defattr(0644,root,root,0755)
 %doc licence-LGPL.txt README.txt ChangeLog.txt
 %{_javadir}/%{name}-%{version}.jar
 %{_javadir}/%{name}.jar
 
 %files javadoc
-%defattr(0644,root,root,0755)
 %{_javadocdir}/%{name}
-
-
-%changelog
-
-* Sat Jan 12 2013 umeabot <umeabot> 1.1.6-3.mga3
-+ Revision: 357681
-- Mass Rebuild - https://wiki.mageia.org/en/Feature:Mageia3MassRebuild
-
-* Sun Oct 14 2012 ennael <ennael> 1.1.6-2.mga3
-+ Revision: 305447
-- Documentation group
-
-* Sat Jan 21 2012 kamil <kamil> 1.1.6-1.mga2
-+ Revision: 198955
-- new version 1.1.6
-- drop gcj support
-- rediff and rename patch to fix-build.patch
-- clean .spec
-
-* Fri Mar 18 2011 dmorgan <dmorgan> 1.1.3-2.mga1
-+ Revision: 74331
-- Really build without gcj
-
-* Mon Jan 24 2011 dmorgan <dmorgan> 1.1.3-1.mga1
-+ Revision: 35928
-- Adapt for mageia
-- imported package libloader
 
