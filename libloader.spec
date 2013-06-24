@@ -8,6 +8,7 @@ Url:		http://reporting.pentaho.org/
 Source0:	http://downloads.sourceforge.net/jfreereport/%{name}-%{version}.zip
 Patch0:		libloader-1.1.2-fix-build.patch
 BuildArch:	noarch
+
 BuildRequires:	ant
 BuildRequires:	ant-contrib
 BuildRequires:	ant-nodeps
