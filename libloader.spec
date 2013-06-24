@@ -23,7 +23,7 @@ Requires:	libbase >= 1.1.3
 LibLoader is a general purpose resource loading framework. It has been
 designed to allow to load resources from any physical location and to
 allow the processing of that content data in a generic way 
-BuildRequires:	totally transparent to the user of that library.
+totally transparent to the user of that library.
 
 %package javadoc
 Summary:	Javadoc for %{name}
