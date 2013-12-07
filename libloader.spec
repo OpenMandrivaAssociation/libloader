@@ -1,7 +1,7 @@
 Summary:	Resource Loading Framework
 Name:		libloader
 Version:	1.1.6
-Release:	3
+Release:	4
 License:	LGPLv2+
 Group:		Development/Java 
 Url:		http://reporting.pentaho.org/
