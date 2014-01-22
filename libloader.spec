@@ -8,7 +8,7 @@ Version: 1.1.3
 Release: 9%{?dist}
 Summary: Resource Loading Framework
 License: LGPLv2
-Group: System Environment/Libraries
+
 #Original source: http://downloads.sourceforge.net/jfreereport/%%{name}-%%{version}.zip
 #unzip, find . -name "*.jar" -exec rm {} \;
 #to simplify the licensing
@@ -28,7 +28,7 @@ transparent to the user of that library.
 
 %package javadoc
 Summary: Javadoc for %{name}
-Group: Documentation
+
 Requires: %{name} = %{version}-%{release}
 %if 0%{?fedora}
 %else
