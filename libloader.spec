@@ -5,7 +5,7 @@ Epoch: 1
 %endif
 Name: libloader
 Version: 1.1.3
-Release: 9%{?dist}
+Release: 9.0%{?dist}
 Summary: Resource Loading Framework
 License: LGPLv2
 
@@ -28,9 +28,8 @@ transparent to the user of that library.
 
 %package javadoc
 Summary: Javadoc for %{name}
-
-Requires: %{name} = %{version}-%{release}
 %if 0%{?fedora}
+Requires: %{name} = %{version}-%{release}
 %else
 Requires: %{name} = %{EVRD}
 %endif
